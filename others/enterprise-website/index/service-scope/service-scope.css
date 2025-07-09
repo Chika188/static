@@ -208,7 +208,7 @@
         left: calc(770px - 1100px);
         top: calc(812px + 1800px);
     } */
-     
+
 }
 
 @media screen and (max-width: 768px) {
@@ -216,7 +216,8 @@
         font-size: 32px;
         top: 60px;
     }
-    .service-bg-title{
+
+    .service-bg-title {
         top: 20px;
     }
 
@@ -224,23 +225,53 @@
         top: 160px;
     }
 
-        .service-img-one {
-        left: calc(1220px - 1100px);
+    .service-img-one {
+        scale: 0.8;
+        left: calc(1220px - 1250px);
         top: calc(180px + 1500px);
     }
 
     .service-img-two {
-        left: calc(932px - 1100px);
-        top: calc(526px + 1500px);
+        scale: 0.8;
+        left: calc(932px - 1170px);
+        top: calc(526px + 1465px);
     }
 
     .service-img-three {
-        left: calc(1460px - 1100px);
-        top: calc(812px + 1500px);
+        scale: 0.8;
+        left: calc(1460px - 1270px);
+        top: calc(812px + 1430px);
     }
 
     .service-img-four {
-        left: calc(770px - 1100px);
-        top: calc(812px + 1500px);
+        scale: 0.8;
+        left: calc(770px - 1180px);
+        top: calc(812px + 1415px);
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .service-img-one {
+        scale: 0.7;
+        left: calc(1220px - 925px);
+        top: calc(180px + 430px);
+    }
+
+    .service-img-two {
+        scale: 0.7;
+        left: calc(932px - 790px);
+        top: calc(526px + 380px);
+    }
+
+    .service-img-three {
+        scale: 0.7;
+        left: calc(1460px - 965px);
+        top: calc(812px + 300px);
+    }
+
+    .service-img-four {
+        scale: 0.7;
+        left: calc(770px - 800px);
+        top: calc(812px + 272px);
     }
 }

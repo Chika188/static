@@ -135,7 +135,10 @@
 
   <body>
     <!-- nav -->
-    <div class="nav max-md:h-[150px] lg:h-[215px]" style="width:100vw; border:none; overflow:hidden;">
+    <div
+      class="nav max-md:h-[150px] lg:h-[215px]"
+      style="width: 100vw; border: none; overflow: hidden"
+    >
       <div class="nav-container">
         <div class="logo">
           <img src="../assets/logo.png" alt="" />
@@ -189,7 +192,9 @@
 
     <!--  -->
     <div class="detail">
-      <div class="detail-title max-md:text-[32px] md:text-[32px] lg:text-[48px]">
+      <div
+        class="detail-title max-md:text-[32px] md:text-[32px] lg:text-[48px]"
+      >
         新闻详情页
       </div>
       <div class="detail-title-line"></div>
@@ -244,8 +249,9 @@
     // 添加接口请求逻辑
     document.addEventListener("DOMContentLoaded", async () => {
       try {
-        const queryString = window.location.search;
-
+        // const queryString = window.location.search;
+        // const newsId = queryString.split("=")[1];
+        const queryString = window.location.hash;
         const newsId = queryString.split("=")[1];
 
         const response = await fetch(`http://localhost:8080/news/${newsId}`);

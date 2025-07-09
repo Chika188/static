@@ -310,9 +310,6 @@
 
             </div>
         </div>
-
-
-
         <div id="section2" class="card-container">
             <h2>兴趣爱好</h2>
             <div class="card-grid">
@@ -374,9 +371,10 @@
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({
+              const offsetTop = targetElement.offsetTop - 200;
+                window.scrollTo({
                     behavior: 'smooth',
-                    block: 'start'
+                    top:offsetTop
                 });
             }
         });
