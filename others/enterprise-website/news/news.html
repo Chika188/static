@@ -15,7 +15,6 @@
         }
 
         /* 新闻列表 */
-        .news-container {}
 
         .news-title {
             font-family: Microsoft YaHei UI;
@@ -127,7 +126,7 @@
         }
 
         /* 修改现有媒体查询 */
-        @media (max-width: 768px) {
+        @media (min-width: 420px) and (max-width: 768px) {
             .news-content {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 15px;
@@ -158,6 +157,51 @@
 
             .news-item-image {
                 height: 50vw;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .news-content {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+                width: 100%;
+                padding: 0 12px;
+                margin-bottom: 20px;
+            }
+
+            .news-item {
+                width: 100%;
+                height: auto;
+                padding-bottom: 20px;
+            }
+
+            .news-item-title {
+                font-size: clamp(14px, 3.5vw, 16px);
+                line-height: 1.4;
+                height: auto;
+                margin-bottom: 5px;
+            }
+
+            .news-item-content {
+                font-size: clamp(12px, 3vw, 14px);
+                line-height: 1.5;
+                height: auto;
+                padding: 0 12px;
+            }
+
+            .news-item-image {
+                height: 50vw;
+            }
+
+            .news-title {
+                font-size: 28px;
+            }
+
+            .news-title-line {
+                width: 64px;
+                height: 4px;
+                margin: 18px auto;
             }
         }
 
@@ -245,7 +289,7 @@
 
         .logo {
             position: absolute;
-            top: 32px;
+            top: 40px;
             left: 48px;
             display: flex;
             align-items: center;
@@ -261,7 +305,7 @@
             position: absolute;
             /* left: 1310px; */
             left: 70%;
-            top: 32px;
+            top: 40px;
             width: 330px;
             /* display: flex; */
             gap: 70px;
@@ -317,7 +361,7 @@
                 </div>
             </div>
             <!--  添加汉堡按钮 -->
-            <div class="lg:hidden max-lg:absolute max-lg:top-4 max-lg:right-4">
+            <div class="lg:hidden max-lg:absolute max-lg:top-5 max-lg:right-4">
                 <button id="menuBtn"
                     class="p-5 rounded-lg text-white rounded-full  hover:bg-blue-600 transition-colors">
                     ☰
@@ -340,7 +384,7 @@
     <!-- 新闻列表 -->
     <div class="news-container">
 
-        <div class="news-title max-md:text-[32px] md:text-[32px] lg:text-[48px]">
+        <div class="news-title max-md:text-[32px] md:text-[32px] lg:text-[48px] sm:text-[30px]">
             新闻列表页
         </div>
         <div class="news-title-line"></div>
@@ -370,7 +414,8 @@
 
     <!-- 联系我们 -->
     <iframe src="../index/contact-us/contact-us.html"
-        style="width:100vw; height:220px; border:none; overflow:hidden; margin-top: 40px;" scrolling="no" title="联系我们"></iframe>
+        style="width:100vw; height:220px; border:none; overflow:hidden; margin-top: 40px;" scrolling="no"
+        title="联系我们"></iframe>
 
 </body>
 
@@ -381,7 +426,7 @@
     // 修改loadNews函数参数解析
     async function loadNews(page = parseInt(new URL(window.location.href).searchParams.get('page')) || 1, pageSize = parseInt(document.getElementById('pageSizeSelect').value)) {
         try {
-              window.history.replaceState(null, null, `?page=${page}`);
+            window.history.replaceState(null, null, `?page=${page}`);
             const response = await fetch(`http://localhost:8080/news?page=${page}&pageSize=${pageSize}`);
             const { data, links } = await response.json();
 
@@ -395,7 +440,7 @@
                 newsItem.className = 'news-item';
                 // 添加点击事件
                 newsItem.addEventListener('click', () => {
-                            window.location.href = `../news-detail/news-detail.html#id=${item.id}`;
+                    window.location.href = `../news-detail/news-detail.html#id=${item.id}`;
                 });
 
                 newsItem.innerHTML = `
@@ -496,7 +541,7 @@
                 if (!isNaN(targetPage)) {
                     const validPage = Math.max(1, Math.min(targetPage, totalPages));
                     if (validPage !== current) {
-                        history.replaceState(null, '', `?page=${validPage}`); 
+                        history.replaceState(null, '', `?page=${validPage}`);
                         pageJumpInput.value = ''; // 清空输入框
                         loadNews(validPage);
                     }

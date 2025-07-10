@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="企业站首页，提供域名主机，网站建设，云服务器，企业邮箱一站式解决方案。">
+  <meta name="keywords" content="企业站, 域名主机, 网站建设, 云服务器, 企业邮箱">
+  <meta name="author" content="企业站团队">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>首页</title>
 
@@ -60,7 +63,7 @@
   <!-- nav -->
   <div class="nav" style="width:100vw; height:215px; border:none; overflow:hidden;position: absolute; z-index: 2;">
     <div class="nav-container ">
-      <div class="logo max-lg:top-[15px] max-lg:left-[25px] lg:top-[32px] lg:left-[48px]">
+      <div class="logo max-lg:top-[15px] max-lg:left-[25px] lg:top-[32px] lg:left-[48px] ">
         <img src="../assets/logo.png" alt="企业站logo">
         <div class="logo-text">企业站</div>
       </div>
@@ -77,7 +80,7 @@
         </div>
       </div>
       <!--  添加汉堡按钮 -->
-      <div class="lg:hidden max-lg:absolute max-lg:-top-4  max-lg:right-1">
+      <div class="lg:hidden max-lg:absolute max-lg:-top-5  max-lg:right-1">
         <button id="menuBtn" class="p-5 rounded-lg text-white rounded-full  hover:bg-blue-600 transition-colors">
           ☰
         </button>
@@ -94,8 +97,10 @@
   <div class="carousel" style="width:100vw; border:none; overflow:hidden" scrolling="no">
     <div class="slides">
       <div class="slide">
-        <img class="slides-img" src="../assets/banner1-xs.webp" data-src-full="../assets/banner1.webp"  srcset="../assets/banner1-mobile.webp 768w, ../assets/banner1.webp 1024w"      sizes="(max-width: 768px) 768px,
-            1024px"
+        <img class="slides-img"
+          src="../assets/banner1-xs.webp"
+          srcset="../assets/banner1-xs.webp 320w, ../assets/banner1-mobile.webp 768w, ../assets/banner1.webp 1024w"
+          sizes="(max-width: 480px) 320px, (max-width: 768px) 768px, 1024px"
           style="width: 100%;" alt="开启互联网+ 从我们开始">
         <div class="slide-text  text-[4vw] md:text-[3vw] lg:text-[2.5vw] top-[20vw] ">
           开启互联网+ 从我们开始</div>
@@ -105,8 +110,10 @@
         </div>
       </div>
       <div class="slide">
-        <img class="slides-img" data-src-full="../assets/banner2.webp" src="../assets/banner2-xs.webp"  srcset="../assets/banner2-mobile.webp 768w, ../assets/banner2.webp 1024w" sizes="(max-width: 768px) 768px,
-            1024px"
+        <img class="slides-img"
+          src="../assets/banner2-xs.webp"
+          srcset="../assets/banner2-xs.webp 320w, ../assets/banner2-mobile.webp 768w, ../assets/banner2.webp 1024w"
+          sizes="(max-width: 480px) 320px, (max-width: 768px) 768px, 1024px"
           style="width: 100%;" alt="关于我们">
         <div class="slide-text  text-[4vw] md:text-[3vw] lg:text-[2.5vw] top-[20vw] ">
           关于我们</div>
@@ -116,8 +123,10 @@
         </div>
       </div>
       <div class="slide">
-        <img class="slides-img" data-src-full="../assets/banner3.webp" src="../assets/banner3-xs.webp"  srcset="../assets/banner3-mobile.webp 768w, ../assets/banner3.webp 1024w" sizes="(max-width: 768px) 768px,
-            1024px"
+        <img class="slides-img"
+          src="../assets/banner3-xs.webp"
+          srcset="../assets/banner3-xs.webp 320w, ../assets/banner3-mobile.webp 768w, ../assets/banner3.webp 1024w"
+          sizes="(max-width: 480px) 320px, (max-width: 768px) 768px, 1024px"
           style="width: 100%;" alt="新闻中心">
 
         <div class="slide-text  text-[4vw] md:text-[3vw] lg:text-[2.5vw] top-[20vw] ">
@@ -136,7 +145,7 @@
     </div>
   </div>
   <!-- 服务范围 -->
-  <div class="md:h-[1500px] max-md:h-[1200px]" style="width:100vw; border:none; overflow:hidden">
+  <div class="md:h-[1500px] max-md:h-[1200px] max-sm:h-[1100px]" style="width:100vw; border:none; overflow:hidden">
     <div class="service-bg">
       <div class="service-bg-title">Service scope
         <img src="../assets/ilustra-cicle.webp" alt="服务范围" loading="lazy">
